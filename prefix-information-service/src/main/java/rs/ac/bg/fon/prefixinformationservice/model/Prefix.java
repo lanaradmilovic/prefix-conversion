@@ -1,15 +1,10 @@
 package rs.ac.bg.fon.prefixinformationservice.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
-import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
@@ -23,6 +18,8 @@ public class Prefix {
     private String name;
     private String symbol;
     private double amount;
+    @Column(name = "decimal_equivalent")
     private String decimalEquivalent;
+    @Column(name = "short_scale")
     private String shortScale;
 }
